@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Maison Élan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+.body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fdfbf6;
+  color: #2c2c2c;
+  transition: background 0.3s, color 0.3s;
+}
+
+.h1, h2, blockquote {
+  font-family: 'Playfair Display', serif;
+}
+
+.about-hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f3efe8;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.about-hero .lead {
+  font-style: italic;
+  color: #6e6e6e;
+}
+
+.content {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.section {
+  margin-bottom: 60px;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  border-left: 4px solid #c9a568;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.gallery {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 30%;
+  border-radius: 8px;
+}
+
+.brand-philosophy {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #7b6a4c;
+  text-align: center;
+  background: #f5f0ea;
+  padding: 40px 20px;
+  border-top: 2px solid #c9a568;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #e6e6e6;
+}
+
+.dark-mode .about-hero {
+  background-color: #2a2a2a;
+}
+
+.dark-mode .brand-philosophy {
+  background: #262626;
+  color: #d4b46a;
+}
+
+.dark-mode .section h2 {
+  border-left-color: #d4b46a;
+}
+
+#darkToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #d4b46a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <button id="darkToggle">Toggle Dark Mode</button>
+
+  <section class="about-hero fade-in">
+    <h1>Our Story</h1>
+    <p class="lead">Born from a love for timeless craftsmanship and modern elegance.</p>
+  </section>
+
+  <section class="content">
+    <div class="section fade-in">
+      <h2>Our Craft</h2>
+      <p>Each creation is meticulously hand-finished with fine Italian leather and time-honored techniques, blending Parisian poise with global heritage.</p>
+    </div>
+
+
+
+    <div class="section fade-in">
+      <h2>Our Values</h2>
+      <ul>
+        <li>🌿 Conscious Craftsmanship</li>
+        <li>🧵 Limited Editions</li>
+        <li>🌍 Sustainable Sourcing</li>
+        <li>💼 Empowerment Through Design</li>
+      </ul>
+    </div>
+
+    <div class="section visuals fade-in">
+      <h2>Behind the Scenes</h2>
+      <div class="gallery">
+        <img src="attelier.jpg" alt="Atelier" />
+        <img src="sketch.jpg" alt="Sketches" />
+        <img src="swatches.jpg" alt="Swatches" />
+       
+      </div>
+    </div>
+
+    <div class="section fade-in">
+      <h2>Why Choose BAGBAG</h2>
+      <p>We create for the discerning—the collectors of artistry. Each bag is a statement of intention, not mass appeal. This is not fast fashion. It’s lasting beauty.</p>
+    </div>
+
+    <blockquote class="brand-philosophy fade-in">
+      “Luxury is not in the price, but in the soul of craftsmanship.”
+    </blockquote>
+  </section>
+
+  <script>
+    const toggle = document.getElementById("darkToggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+</body>
+</html>
